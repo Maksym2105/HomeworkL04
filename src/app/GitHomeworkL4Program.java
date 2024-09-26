@@ -1,7 +1,5 @@
 package app;
 
-import java.rmi.server.LogStream;
-
 public class GitHomeworkL4Program {
 
     public static void main(String[] args) {
@@ -9,24 +7,29 @@ public class GitHomeworkL4Program {
         int productNumber = 1;
         String producttype = "smartphone";
         String totalsales = "Total sales for 5 days is EUR";
-        double salesbyday = 2430.68;
+        int productQuantity = 50;
+        double productPrice = 243.0682;
         int days = 5;
-        double salessummary = (salesbyday +0.001) * (double)days;
+        double totalSales1 = (double)productQuantity * productPrice;
+        double salesPerDay1 = totalSales1 / days;
+
         System.out.printf("Product No %d: %s,\n" +
                 "%s %.2f, \n" +
                 "Sales by day is EUR %.2f. \n",  productNumber, producttype, totalsales,
-                salessummary ,salesbyday);
+                totalSales1,salesPerDay1);
 
                         producttype = "laptop,";
                         totalsales = "Total sales for 7 days is EUR";
                         productNumber = 2;
-                        salesbyday = 1498.12;
+                        productQuantity = 70;
+                        productPrice = 149.8121;
                         days = 7;
-                        salessummary = (salesbyday + 0.001) * (double)days;
+                        totalSales1 = (double)productQuantity * productPrice;
+                        salesPerDay1 = totalSales1 / days;
                         System.out.printf("Product No %d: %s \n" +
                         "%s %.2f, \n" +
                         "Sales by day is EUR %.2f. \n"  ,productNumber, producttype, totalsales,
-                                salessummary, salesbyday);
+                                totalSales1, salesPerDay1);
 
 
 
